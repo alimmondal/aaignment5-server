@@ -7,6 +7,10 @@ export const BookSchema = new Schema<IBook, BookModel>(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
     author: {
       type: String,
       required: true,
@@ -29,6 +33,7 @@ export const BookSchema = new Schema<IBook, BookModel>(
     rating: {
       type: Number,
     },
+    comments: [{ type: String }],
   },
   {
     timestamps: true,

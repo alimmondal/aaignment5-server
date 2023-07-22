@@ -1,13 +1,15 @@
 import { Model } from 'mongoose';
 
 export type IBook = {
+  image: string;
   title: string;
   author: string;
-  price: number;
+  price?: number;
   publicationDate: string;
   status?: boolean;
   genre: string;
   rating?: number;
+  comments?: string[];
 };
 
 export type BookModel = Model<IBook, Record<string, unknown>>;

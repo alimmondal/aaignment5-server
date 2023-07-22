@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // custom routes
-app.use('/api/v1', routes);
+app.use('/', routes);
 
 // default routes for testing
 app.get('/', async (req: Request, res: Response) => {
@@ -38,5 +38,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
+// app.listen(5000, () => {
+//   console.log('Server is running on http://localhost:3000');
+// });
 
 export default app;

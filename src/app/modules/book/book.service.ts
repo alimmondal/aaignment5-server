@@ -16,7 +16,7 @@ const createBookToDb = async (cowData: IBook): Promise<IBook | null> => {
   return result;
 };
 
-const getAllCows = async (
+const getAllBooks = async (
   filters: IBookFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IBook[]>> => {
@@ -54,7 +54,6 @@ const getAllCows = async (
     andConditions.length > 0 ? { $and: andConditions } : {};
 
   const result = await Book.find(whereConditions)
-    .populate('user')
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -71,19 +70,19 @@ const getAllCows = async (
   };
 };
 
-const getSingleCow = async (id: string): Promise<IBook | null> => {
+const getSingleBook = async (id: string): Promise<IBook | null> => {
   const result = await Book.findOne({ _id: id });
   return result;
 };
 
-const updateCow = async (
+const updateBook = async (
   id: string,
   payload: Partial<IBook>
 ): Promise<IBook | null> => {
   const isExist = await Book.findOne({ _id: id });
 
   if (!isExist) {
-    throw new ApiError(httpStatus.NOT_FOUND, 'Cow Id not found !');
+    throw new ApiError(httpStatus.NOT_FOUND, 'Book Id not found !');
   }
 
   const result = await Book.findOneAndUpdate({ _id: id }, payload, {
@@ -92,16 +91,16 @@ const updateCow = async (
   return result;
 };
 
-const deleteCow = async (id: string): Promise<IBook | null> => {
-  const result = await Book.findByIdAndDelete(id).populate('user');
+const deleteBook = async (id: string): Promise<IBook | null> => {
+  const result = await Book.findByIdAndDelete(id);
 
   return result;
 };
 
 export const BookService = {
   createBookToDb,
-  getAllCows,
-  getSingleCow,
-  updateCow,
-  deleteCow,
+  getAllBooks,
+  getSingleBook,
+  updateBook,
+  deleteBook,
 };
