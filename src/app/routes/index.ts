@@ -1,6 +1,6 @@
 import express from 'express';
 import { BookRoutes } from '../modules/book/book.route';
-import { UserRoutes } from '../modules/user/user.routes';
+import { CommentRoutes } from '../modules/user/comment.routes';
 const router = express.Router();
 
 const moduleRoutes = [
@@ -10,7 +10,7 @@ const moduleRoutes = [
   },
   {
     path: '/comment',
-    route: UserRoutes,
+    route: CommentRoutes,
   },
 ];
 moduleRoutes.forEach(route => router.use(route.path, route.route));

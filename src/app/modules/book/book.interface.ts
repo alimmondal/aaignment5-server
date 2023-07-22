@@ -1,13 +1,13 @@
 import { Model } from 'mongoose';
 
 export type IBook = {
-  image: string;
-  title: string;
-  author: string;
+  image?: string;
+  title?: string;
+  author?: string;
   price?: number;
-  publicationDate: string;
+  publicationDate?: string;
   status?: boolean;
-  genre: string;
+  genre?: string;
   rating?: number;
   comments?: string[];
 };

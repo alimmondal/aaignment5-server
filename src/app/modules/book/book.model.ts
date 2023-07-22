@@ -5,27 +5,27 @@ export const BookSchema = new Schema<IBook, BookModel>(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
     },
     image: {
       type: String,
-      required: true,
+      // required: true,
     },
     author: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
-      required: true,
+      // required: true,
     },
     publicationDate: {
       type: String,
-      required: true,
+      // required: true,
     },
     genre: {
       type: String,
-      required: true,
+      // required: true,
     },
     status: {
       type: Boolean,
