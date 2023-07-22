@@ -10,8 +10,8 @@ import { bookSearchableFields } from './book.constant';
 import { IBook, IBookFilters } from './book.interface';
 import { Book } from './book.model';
 
-const createBookToDb = async (cowData: IBook): Promise<IBook | null> => {
-  const result = await Book.create(cowData);
+const createBookToDb = async (bookData: IBook): Promise<IBook | null> => {
+  const result = await Book.create(bookData);
 
   return result;
 };
