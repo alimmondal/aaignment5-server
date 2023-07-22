@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "D:\\web development\\Next level web development\\assignment\\assignment5\\assignment3\\logs\\winston\\errors\\.135ac4367cd685fb79baeb915fc1b622013dfd47-audit.json",
+    "files": [
+        {
+            "date": 1689948756216,
+            "name": "D:\\web development\\Next level web development\\assignment\\assignment5\\assignment3\\logs\\winston\\errors\\phu-2023-07-21-20-error.log",
+            "hash": "de2c6ed054bde5c18f5ca5caaddc862ea04ba95fe686b5951e4b09afaa1755c2"
+        },
+        {
+            "date": 1689952540782,
+            "name": "D:\\web development\\Next level web development\\assignment\\assignment5\\assignment3\\logs\\winston\\errors\\phu-2023-07-21-21-error.log",
+            "hash": "d69dd49ea5a064cb01a3a6d80140db78f178ca365541b6f50e5977865d9de715"
+        },
+        {
+            "date": 1689955543568,
+            "name": "D:\\web development\\Next level web development\\assignment\\assignment5\\assignment3\\logs\\winston\\errors\\phu-2023-07-21-22-error.log",
+            "hash": "e61d9b8a076728513794cb6545e442d2478cc5b73d07429e67e190e148f3431a"
+        }
+    ],
+    "hashType": "sha256"
+}
