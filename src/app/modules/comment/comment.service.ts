@@ -16,7 +16,7 @@ const addCommentToDb = async (
   }
 
   const result = await Book.updateOne(
-    { _id: Object(id) },
+    { _id: id },
     { $push: { comments: payload } }
   );
 

@@ -1,6 +1,6 @@
 import express from 'express';
 import { BookRoutes } from '../modules/book/book.route';
-import { CommentRoutes } from '../modules/user/comment.routes';
+import { CommentRoutes } from '../modules/comment/comment.routes';
 const router = express.Router();
 
 const moduleRoutes = [

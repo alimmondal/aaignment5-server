@@ -50,6 +50,7 @@ const getAllBooks = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
+
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 
@@ -71,7 +72,7 @@ const getAllBooks = async (
 };
 
 const getSingleBook = async (id: string): Promise<IBook | null> => {
-  const result = await Book.findOne({ _id: id });
+  const result = await Book.findById({ _id: id });
   return result;
 };
 
